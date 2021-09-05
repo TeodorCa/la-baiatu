@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+
+color: #111;
+font-family: 'Source Sans Pro', serif, sans-serif;
+font-size: 16px;
+text-align: justify;
+width: 17rem;
+}
+
+img {
+  width: 150px;
+  height: 250px;
+  border-radius: 20px;
+  margin-left: 2.5rem;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* unele browsere au margin si padding predefinit si ne-ar putea incurca */
+  margin: 0;
+  padding: 0;
+  /* font luat de pe google fonts, nu uitati sa il includeti in html, cu tag-ul link! */
+  font-family: 'Roboto', sans-serif;
+  /* daca vrem imagine de fundal, cu metoda url dam link-ul catre imaginea respectiva */
+  /* cover inseamna ca imaginea va ocupa fundalul intregului element (aici body)*/
+  background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .8)), url('https://wallpaperplay.com/walls/full/2/e/8/5077.jpg');
+  background-size: cover;
+}
+
+#root {
+  /* adaugam margin si padding procentual, ca sa arate mai bine si sa fie responsive */
+  /* daca la margin sunt specificate 2 valori:
+	prima este valoare pentru margin top si margin bottom
+	a doua este valoarea pentru margin left si margin right */
+  margin: 5% 5%;
+  padding: 5% 3%;
+  background-color: rgb(235, 198, 198);
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .3)), url(http://wallpapertop.net/wp-content/uploads/2018/04/The%20Weeknd%20wallpaper%20for%20windows.jpg);
+  background-size: auto;
+}
+
+
+#product-list {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    flex-grow: 1;
+    padding: 2px; /* this */
+    /* This aligns items to the end line on main-axis */
+    font-family: "Roboto", cursive;
+
+    @media only screen and (max-width: 780px) {
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+}
+
+
+.product {
+
+  /* background: grey; */
+	 box-shadow: inset 0 0 10px #000000;
+   padding: 20px;
+   border-radius: 50px;
+   margin: 10px;
+
+
+
+}
+
+.product:hover {
+
+  /* background: grey; */
+	border: 0.5px black solid;
+  background: #60a3bc;
+
+}
+
+input {
+  color: #fff !important;
+  text-transform: uppercase;
+  background: #60a3bc;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  padding: 0.8rem;
+  margin: 0.3rem;
+
+}
+
+input:hover {
+
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+
+}
+
+#addPhone {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 25px;
+}
+
+
+button {
+
+  color: #fff ;
+  text-transform: uppercase;
+  background: #60a3bc;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  box-shadow: inset 0 0 10px #000000;
+  margin-top: 2rem;
+
+}
+
+
+button:hover {
+
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  box-shadow: inset 0 0 10px #000000;
+  cursor: pointer;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+#header h1 {
+  /* font google maps */
+  font-family: 'Indie Flower', cursive;
+  /* cu font-size specificati dimensiunea textului */
+  /* rem si em sunt unitati relative si ajuta ca pagina sa fie responsive (sa se vada ok si pe mobil/tableta/..) */
+  /* daca vreti mai multe detalii:
+	https://zellwk.com/blog/rem-vs-em/
+	; */
+  font-size: 2rem;
+  margin: 0.5em 0.2em;
+}
+ 
+
+
+/* Nu merge deocamdata */
