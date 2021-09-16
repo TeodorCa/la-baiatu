@@ -15,6 +15,11 @@ text-align: justify;
 width: 17rem;
 }
 
+h2 {
+  text-align: center;
+  margin-top: 5rem;
+}
+
 img {
   width: 150px;
   height: 250px;
@@ -32,7 +37,6 @@ body {
   font-family: 'Roboto', sans-serif;
   /* daca vrem imagine de fundal, cu metoda url dam link-ul catre imaginea respectiva */
   /* cover inseamna ca imaginea va ocupa fundalul intregului element (aici body)*/
-  background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .8)), url('https://wallpaperplay.com/walls/full/2/e/8/5077.jpg');
   background-size: cover;
 }
 
@@ -41,23 +45,23 @@ body {
   /* daca la margin sunt specificate 2 valori:
 	prima este valoare pentru margin top si margin bottom
 	a doua este valoarea pentru margin left si margin right */
-  margin: 5% 5%;
-  padding: 5% 3%;
-  background-color: rgb(235, 198, 198);
+  /* margin: 5% 5%; */
+  padding: 0% 3%;
+  background-color: #f0f0f0;
   border-radius: 10px;
-  background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .3)), url(http://wallpapertop.net/wp-content/uploads/2018/04/The%20Weeknd%20wallpaper%20for%20windows.jpg);
   background-size: auto;
 }
+
 
 
 #product-list {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     align-content: space-between;
-    flex-grow: 1;
+    flex-grow: 0;
     padding: 2px; /* this */
     /* This aligns items to the end line on main-axis */
     font-family: "Roboto", cursive;
@@ -83,23 +87,29 @@ body {
 }
 
 .product:hover {
-
-  /* background: grey; */
 	border: 0.5px black solid;
-  background: #60a3bc;
-
+  background: #cae2f7;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  transition: all 0.3s ease 0s;
 }
 
 input {
-  color: #fff !important;
+  color: rgb(46, 41, 41) !important;
   text-transform: uppercase;
-  background: #60a3bc;
+  background: #DFECF1;
   border-radius: 50px;
   display: inline-block;
   border: none;
   padding: 0.8rem;
   margin: 0.3rem;
+  width: 40%;
+  border: 1px solid #60a3bc;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
 
+#add-film {
+  width: 16%;
 }
 
 input:hover {
@@ -111,26 +121,19 @@ input:hover {
 
 }
 
-#addPhone {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 25px;
-}
-
-
 button {
 
   color: #fff ;
   text-transform: uppercase;
-  background: #60a3bc;
+  background: #b6b7b8;
   padding: 20px;
   border-radius: 50px;
   display: inline-block;
   border: none;
   box-shadow: inset 0 0 10px #000000;
   margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
 
 }
 
@@ -151,20 +154,68 @@ button:hover {
 }
 
 
-
-
 #header h1 {
-  /* font google maps */
-  font-family: 'Indie Flower', cursive;
-  /* cu font-size specificati dimensiunea textului */
-  /* rem si em sunt unitati relative si ajuta ca pagina sa fie responsive (sa se vada ok si pe mobil/tableta/..) */
-  /* daca vreti mai multe detalii:
-	https://zellwk.com/blog/rem-vs-em/
-	; */
+  width: 90%;
   font-size: 2rem;
   margin: 0.5em 0.2em;
+  text-align: center;
 }
- 
 
+#header {
+  margin-top: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6efeb;
+  border-radius: 6rem;
+  border: 2px solid #60a3bc;
+  font-family: 'Montserrat', sans-serif;
+}
 
-/* Nu merge deocamdata */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#add-phone{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+html {
+  background-color: #f0f0f0;
+  margin-bottom: 3rem;
+}
+
+#header h4 {
+  width: 80%;
+  text-align: center;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+}
+
+.p-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.p-child {
+  display: flex;
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+.product-div {
+  display: flex;
+}

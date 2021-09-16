@@ -1,5 +1,4 @@
 class Product {
-  // un produs este creat cu o clasa cu urmtorul constructor:
   constructor(photo, name, description, rating, year, date) {
 
     this.photo = photo;
@@ -9,21 +8,21 @@ class Product {
     this.year = year;
     this.date = date;
   }
-  // metoda renderProduct adauga produse in interiorul listei de produse
+ 
   renderProduct() {
     const productList = document.querySelector('#product-list');
     productList.innerHTML += `
-			<div class="product">
-			<ul>
-			<li>
-        <img src = "${this.photo}">
-        <p>Nume: ${this.name}</p>
-        <p>Descriere: ${this.description}</p>
-				<p>Rating: ${this.rating}</p>
-				<p>An: ${this.year}</p>
-				<p>Data: ${this.date}</p>
-				</li>
-				</ul>
+			<div class="product font-link">
+        <ul>
+          <li>
+            <img src = "${this.photo}">
+            <p class="p-main">Nume: <p class="p-child">${this.name}</p></p>
+            <p class="p-main">Descriere: <p class="p-child">${this.description}</p></p>
+            <div class="product-div"><p class="p-main">Rating: <p class="p-child">${this.rating}</p></p></div>
+            <div class="product-div"><p class="p-main">An: <p class="p-child">${this.year}</p></p></div>
+            <div class="product-div"><p class="p-main">Data: <p class="p-child">${this.date}</p></p></div>
+          </li>
+        </ul>
 			</div>
 		`;
   }
